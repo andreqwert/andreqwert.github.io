@@ -1,2 +1,4 @@
 # andreqwert.github.io
-My first hosting
+
+Попытка сделать персональный сайт за пару вечеров, поиграться в HTML и CSS.
+
