@@ -163,5 +163,18 @@
     >>> min() # inf
     </code>
     </pre>
+    
+    Обычно один аргумент указывают обязательным, а остальные - произвольными. Потому что, как правило, некруто возаращать пустое множество. Логичнее было бы, чтобы функция хоть что-то сто́ящее:.
+
+    <pre>
+    <code data-language="python">
+    def min(first, *args):   # type(argc) == tuple
+        res = first
+        ...
+
+    >>> min() # missing 1 required argument: 'first'
+    </code>
+    </pre>
+    
     </body>
 </html>
