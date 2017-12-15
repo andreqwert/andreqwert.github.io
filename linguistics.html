@@ -1,6 +1,36 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <link href="/assets/themes/green_and_blue.css" rel="stylesheet" type="text/css">
+        <meta charset='utf-8'>
+        <title>Python notes</title>
+    </head>
+    
+    <body>
+    <script src="/assets/rainbow-custom.min.js"></script>
+    <p align='justify'>
 
-<a href='index.html'>Назад</a> <br>
-<h2>Компьютерная лингвистика</h2>
+    <a href='index.html'>Назад</a> <br>
 
-<!--Сайт для подсветки кода: highlight.hohli.com-->
+    <h2>Компьютерная лингвистика</h2>
+    Напишите программу, получающую на вход положительное целое число $k$ и вычисляющую наибольшее целое число $m$ такое, что $2^{m} \le k$. Пользоваться возведением в степень и логарифмированием запрещено.
+
+    <pre><code data-language="python">
+    import math
+
+    k = int(input('Enter k: '))
+    m = 0
+
+    while 2 ** m <= k:
+        m += 1
+    print(m - 1)
+
+    </code></pre>      
+    </body>
+</html>
+
+
+
+
+        
+
