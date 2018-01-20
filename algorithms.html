@@ -12,26 +12,28 @@
 
     <a href='index.html'>Назад</a> <br>
 
-    <h2>Некоторые заметки по Python</h2>
-    <h3>По материалам лекций Георгия Курячего и СПБАУ РАН</h3>
-        
-       
-    1. <b>iter</b> - вызывает следующий элемент в кортеже
+    <h2>Алгоритмы на Python</h2>
+
        
     <pre>
     <code data-language="python">
-        c = 23, 234, 23, 2
-        a = iter(c)
-        next(a)
-        >>> 23
-        next(a)
-        >>> 24
-        next(a)
-        >>> 23
-        next(a)
-        >>> 2
-        next(a)
-        >>> StopIteration
+    # ЛИНЕЙНЫЙ ПОИСК
+   
+    # A - массив
+    # x - искомое значение
+
+    def linear_search(A, x):
+        """Linear search"""
+
+        answer = 'NotFound'
+        for i in range(0, len(A)):
+            if A[i] == x:
+                answer = i
+        return answer
+
+
+    ans = linear_search(['A', 'B', 'C', 'D'], 'E')
+    print(ans)
     </code>
     </pre>
 
