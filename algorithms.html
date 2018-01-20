@@ -14,11 +14,10 @@
 
     <h2>Алгоритмы на Python</h2>
 
-       
+    1. Линейный поиск (Linear search)
     <pre>
     <code data-language="python">
-    # ЛИНЕЙНЫЙ ПОИСК
-   
+
     # A - массив
     # x - искомое значение
 
@@ -32,8 +31,24 @@
         return answer
 
 
-    ans = linear_search(['A', 'B', 'C', 'D'], 'E')
-    print(ans)
+    linear_search(['A', 'B', 'C', 'D'], 'E') # NotFound
+    linear_search(['A', 'B', 'C', 'D'], 'A') # 0
+    linear_search(['A', 'B', 'C', 'D'], 'C') # 2
+
+    </code>
+    </pre>
+
+    2. Рекурсия (Recursion)
+    <pre>
+    <code data-language="python">
+    def factorial(n):
+        if n == 0:
+            return 1
+        else:
+            return n*factorial(n-1)
+
+
+    print(factorial(5))
     </code>
     </pre>
 
