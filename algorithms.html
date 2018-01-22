@@ -52,27 +52,27 @@
     </code>
     </pre>
 
-3. Бинарный поиск (Binary search)
-<pre>
-<code data-language="python">
-    def binary_search(A, x):
+    3. Бинарный поиск (Binary search)
+    <pre>
+    <code data-language="python">
+        def binary_search(A, x):
 
-        lower_bound = 0
-        upper_bound = len(A)
-        while lower_bound != upper_bound:
-            compared_value = (lower_bound + upper_bound) // 2
-            if x == A[compared_value]:
-                return compared_value
-            elif x < A[compared_value]:
-                upper_bound = compared_value
-            else:
-                lower_bound = compared_value + 1
-        return 'Not Found'
+            lower_bound = 0
+            upper_bound = len(A)
+            while lower_bound != upper_bound:
+                compared_value = (lower_bound + upper_bound) // 2
+                if x == A[compared_value]:
+                    return compared_value
+                elif x < A[compared_value]:
+                    upper_bound = compared_value
+                else:
+                    lower_bound = compared_value + 1
+            return 'Not Found'
 
 
-binary_search([1, 2, 3, 4, 5, 6], 3)       # 2
-binary_search(['A', 'B', 'C', 'D'], 'D')   # 3
-binary_search(['A', 'B', 'C', 'D'], 'F')   # Not Found
+    binary_search([1, 2, 3, 4, 5, 6], 3)       # 2
+    binary_search(['A', 'B', 'C', 'D'], 'D')   # 3
+    binary_search(['A', 'B', 'C', 'D'], 'F')   # Not Found
     </code>
     </pre>
     </body>
