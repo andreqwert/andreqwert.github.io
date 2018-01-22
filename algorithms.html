@@ -55,12 +55,14 @@
     3. Бинарный поиск (Binary search)
     <pre>
     <code data-language="python">
+    # Предполагается, что значения в массиве - в порядке возрастания!
+    
     def binary_search(A, x):
 
         lower_bound = 0
         upper_bound = len(A)
         while lower_bound != upper_bound:
-            compared_value = (lower_bound + upper_bound) // 2
+            compared_value = (lower_bound + upper_bound) / 2
             if x == A[compared_value]:
                 return compared_value
             elif x < A[compared_value]:
