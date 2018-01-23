@@ -100,13 +100,13 @@
     <code data-language="python">
     def insertion_sort(A):
 
-    for i in range(len(A)):
-        x = i
-        for z in range(x+1, len(A)):
-            if A[x] > A[z]:
-                x = z
-        A[i], A[x] = A[x], A[i]
-    return A
+        for i in range(len(A)):
+            x = i
+            for z in range(x+1, len(A)):
+                if A[x] > A[z]:
+                    x = z
+            A[i], A[x] = A[x], A[i]
+        return A
 
     print(insertion_sort([1, 2, 3, 5, 4, 6, 7]))  # [1, 2, 3, 4, 5, 6, 7]
     print(insertion_sort([3, 3, 3, 2, 1, 27, 0])) # [0, 1, 2, 3, 3, 3, 27]
