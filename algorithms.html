@@ -98,8 +98,6 @@
     
     <pre>
     <code data-language="python">
-    # Предполагается, что значения в массиве - в порядке возрастания!
-    
     def insertion_sort(A):
 
     for i in range(len(A)):
@@ -110,8 +108,8 @@
         A[i], A[x] = A[x], A[i]
     return A
 
-    print(insertion_sort([1, 2, 3, 5, 4, 6, 7]))
-    print(insertion_sort([3, 3, 3, 2, 1, 23, 0]))
+    print(insertion_sort([1, 2, 3, 5, 4, 6, 7]))  # [1, 2, 3, 4, 5, 6, 7]
+    print(insertion_sort([3, 3, 3, 2, 1, 27, 0])) # [0, 1, 2, 3, 3, 3, 27]
     </code>
     </pre>
     
