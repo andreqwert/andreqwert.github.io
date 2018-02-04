@@ -20,7 +20,7 @@
     1. <b>iter</b> - вызывает следующий элемент в кортеже
     <cut>   
     <pre>
-    <code data-language="python">
+    <code class="python">
         c = 23, 234, 23, 2
         a = iter(c)
         next(a)
@@ -39,7 +39,7 @@
         
     2. <b>enumerate</b> - возвращает пару <i>номер_элемента:элемент</i>
     <pre>
-    <code data-language="python">
+    <code class="python">
         c = 23, 234, 23, 2
         for i, e in enumerate(c):
             print(i, e)
@@ -53,7 +53,7 @@
     
     3. <b>reversed</b> - проходит последовательность задом наперёд
     <pre>
-    <code data-language="python">
+    <code class="python">
         c = 23, 234, 23, 2
         сс = reversed(c)
         >>> (2, 23, 234, 23)
@@ -62,7 +62,7 @@
         
     4. <font size="4"><b>zip</b> - делает из последовательностей список пар</font>
     <pre>
-    <code data-language="python">
+    <code class="python">
         a,b,c,d = (1,2,3), (4,5,6), (7,8,9), (10,11,12)
         for e in zip(a,b,c,d):
             print(e)
@@ -75,7 +75,7 @@
     
     <h2>Функции</h2>
     <pre>
-    <code data-language="python">
+    <code class="python">
         def fun(a, b):
             c = a + 2*b
             # если нет return, то по умолчанию возвращается None
@@ -84,7 +84,7 @@
         
     Ошибка об отсутствии <i><b>'c'</b></i> появится только после вызова функции:
     <pre>
-    <code data-language="python">
+    <code class="python">
         def fun(a, b):
             return a+b+c
             
@@ -99,7 +99,7 @@
         
     Функции работают и при передаче строковых данных:
     <pre>
-    <code data-language="python">
+    <code class="python">
         def fun(a, b):
             return a+b*2
             
@@ -113,7 +113,7 @@
         
     Допустим, имеется код:
     <pre>
-    <code data-language="python">
+    <code class="python">
     def fun(a, b):
         c = a + 2*b
         print(dir())
@@ -132,7 +132,7 @@
     
     Но можно перенести <i><b>c</b></i> в глобальную область видимости. Тогда:
     <pre>
-    <code data-language="python">
+    <code class="python">
     def fun(a, b):
         global c
         c = a + 2*b
@@ -153,7 +153,7 @@
     <h3>Если функция должна принять произвольное число аргументов...</h3>
     ... То можно воспользоваться параметром <b>*args</b>. Таким образом функция принимает сколь угодно много аргументов, а затем производит над ними операции. В данном случае - ищет минимум. 
     <pre>
-    <code data-language="python">
+    <code class="python">
     def min(*args):   # type(argc) == tuple
         res = float('inf') # пусть res равен бесконечности
         for arg in args:
@@ -169,7 +169,7 @@
     Обычно один аргумент указывают обязательным, а остальные - произвольными. Потому что, как правило, некруто возаращать пустое множество. Логичнее было бы, чтобы функция возвращала хоть что-то сто́ящее:.
 
     <pre>
-    <code data-language="python">
+    <code class="python">
     def min(first, *args):   # type(argc) == tuple
         res = first
         ...
