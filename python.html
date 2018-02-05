@@ -14,7 +14,7 @@
     <a href='index.html'>Назад</a> <br>
 
     <h2>Некоторые заметки по Python</h2>
-    <h3>По материалам лекций Георгия Курячего и СПБАУ РАН</h3>
+    <h3>Генераторы, итераторы и прочие полезности</h3>
         
        
     1. <b>iter</b> - вызывает следующий элемент в кортеже
@@ -177,6 +177,67 @@
     >>> min() # missing 1 required argument: 'first'
     </code>
     </pre>
+    
+    <h3>Классы</h3>
+    
+    Хороший <a href='https://www.youtube.com/watch?v=ZDa-Z5JzLYM&t=233s'>Хороший tutorial</a> по классам.
+    
+    Смысл классов в том, чтобы не писать повторяющийся код, а точнее - не переписывать по отдельности сущности, у которой есть методы. <li>
+    Например, данный код является повторяющимся:
+    <pre>
+    <code class="python">
+    class Employee:
+
+        # Каждый сотрудник является экземпляром класса
+        pass
+
+
+    emp_1 = Employee()
+    emp_2 = Employee()
+
+    emp_1.firstname = 'Corey'
+    emp_1.lastname = 'Schaifer'
+    emp_1.email = 'Corey.Schaifer@company.com' 
+    emp_1.pay = 50000
+
+
+
+    emp_2.firstname = 'Test'
+    emp_2.lastname = 'User'
+    emp_2.email = 'Test.User@company.com' 
+    emp_2.pay = 60000
+
+    print(emp_1.email, emp_2.email)
+    </code>
+    </pre>
+    
+    Так вот. Чтобы не писать повторяющийся код, применяют классы. Это нужно в данном примере, в частности, для того, чтобы не переписывать переменные под каждого работника в отдельности. <li>
+    С помощью классов можно подать на вход функции всего лишь аргументы о имени-фамилии-почте и з/п. Это также сократит в разы количество кода. <li>
+    <li>
+    Более конкретно в данном случае необходима функция <b>__init__</b>. <li>
+    Перепишем функцию. <li>
+    Согласно общепринятому правилу, первым аргументом является слово <b>self</b> - это слово принадлежности метода к классу.
+
+    <pre>
+    <code class="python">
+    class Employee:
+
+        def __init__(self, firstname, lastname, pay):
+            self.firstname = firstname   # всё равно что "emp_1.firstname = 'Corey'"
+            self.lastname = lastname
+            self.pay = pay
+            self.email = firstname + '.' + lastname + '@company.com'
+
+
+    emp_1 = Employee('Corey', 'Schaifer', 50000)
+    emp_2 = Employee('Test', 'User', 60000)
+
+
+    print(emp_1.email)
+    print(emp_2.email)
+    </code>
+    </pre>
+    
     
     
     
