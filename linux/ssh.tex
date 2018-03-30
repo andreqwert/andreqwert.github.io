@@ -1,0 +1,186 @@
+\documentclass[a4paper, 14pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtext}
+\usepackage[english, russian]{babel}
+\usepackage{euscript}
+\usepackage{mathrsfs}
+\usepackage{lscape}
+\usepackage{cmap}
+\usepackage{listings}
+\usepackage{indentfirst} % чтобы первый абзац был с отступом.
+\usepackage[14pt]{extsizes}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{color} %% это для отображения цвета в коде
+\usepackage{listings} %% собственно, это и есть пакет listings
+\usepackage{caption}
+\usepackage{multirow} 
+\usepackage[russian]{babel}
+
+
+\DeclareCaptionFont{white}{\color{white}} %% это сделает текст заголовка белым
+%% код ниже нарисует серую рамочку вокруг заголовка кода.
+\DeclareCaptionFormat{listing}{\colorbox{black}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]
+{format=listing,labelfont=white,textfont=white}
+\definecolor{linkcolor}{HTML}{799B03} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+\usepackage[pdftex]{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.png,.jpg}
+
+
+
+
+\author{}
+\title{}
+\date{}  % Чтобы убрать дату
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=2cm}% левое поле
+\geometry{right=0.5cm}% правое поле
+\geometry{top=1cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+
+\begin{document}
+
+
+
+	\pagestyle{plain} % нумерация вкл.
+	
+	\newpage
+	
+	\section*{Домашнее задание №2}
+	
+	\subsection*{Постановка задачи}
+	
+	В домашнем каталоге создать каталог \textbf{f.lastname} (\textit{f} -- первая буква имени). В этом каталоге:
+	
+	1. Вывести список процессов в \textit{ps.out};
+	
+	2. Сохранить информацию о доступной памяти и дисковом пространстве в файлы \textit{mem.out} и \textit{disk.out};
+	
+	3. Создать структуру каталогов:
+	
+	\hspace{0.2cm}1. Dir1
+	
+	\hspace{1.2cm} 1. Dir3, Dir4, Dir5
+	
+	\hspace{0.2cm}2. Dir2
+	
+	\hspace{1.2cm} 1. Dir6, Dir7, Dir8	
+	
+	4. Сохранить последовательность действий при помощи \textit{history > history.out};
+	
+	5. Получившийся \textit{history.out} переименовать в \textit{f.lastname.out}.
+	
+	\subsection*{Процесс решения}
+	
+	Запускаем виртуальную машину с линуксом. Всё, больше линукс не нужен.
+	
+	\vspace{0.1cm}
+	
+	На MacOS открываем iTerm2. \textbf{Подключаемся к виртальной машине}. Подробнее про ssh в ДЗ № 1:
+	
+	\textit{ssh user@192.168.1.39}
+	
+	\vspace{0.2cm}
+	
+	 Создаём папку и переходим в неё:
+	
+	\textit{mkdir f.lastname}
+	
+	\textit{cd f.lastname}
+	
+	\vspace{0.2cm}
+	
+	\textbf{Сохрaняем список процессов в файл} \textit{ps.out}:
+	
+	\textit{ps > ps.out}
+	
+	\vspace{0.2cm}
+	
+	\textbf{Сохраняем информацию о дисковом пространстве в файл} \textit{disk.out}:
+	
+	\textit{df > disk.out}
+	
+	\vspace{0.2cm}
+	
+	А \textbf{информацию о доступной памяти -- в файл} \textit{mem.out}:
+	
+	\textit{free > mem.out}
+	
+	\vspace{0.2cm}
+	
+	Создаём структуру каталогов:
+	
+	\textit{mkdir Dir1}
+	
+	\textit{cd Dir1}
+	
+	\textit{mkdir Dir3}
+	
+	\textit{mkdir Dir4}
+	
+	\textit{mkdir Dir5}
+	
+	\vspace{0.2cm}
+	
+	\textbf{Возврат на каталог ниже}:
+	
+	\textit{cd ..}
+	
+	\vspace{0.2cm}
+	
+	И дальше создаём структуру каталога:
+	
+	\textit{mkdir Dir2}
+	
+	\textit{cd Dir2}
+	
+	\textit{mkdir Dir6}
+	
+	\textit{mkdir Dir7}
+	
+	\textit{mkdir Dir8}
+
+	\vspace{0.2cm}
+	
+	Возврат на каталог ниже:
+	
+	\textit{cd ..}
+	
+	\vspace{0.2cm}
+	
+	\textbf{Сохраняем историю действий} в терминале:
+	
+	\textit{history > history.out}
+	
+	\vspace{0.2cm}
+	
+	\textbf{Переименовываем} получившийся файл:
+	
+	\textit{mv history.out f.lastname.out}
+	
+	\vspace{3cm}
+	
+	Полезным может также оказаться \textbf{очищение истории команд} терминала:
+	
+	\textit{history -cw}
+	
+	\vspace{0.2cm}
+
+	\textbf{Запуск файла}:
+	
+	\textit{cat f.lastname.out}
+	
+	
+	
+	
+	
+	
+	
+
+\end{document} 
