@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/assets/themes/green_and_blue.css" rel="stylesheet" type="text/css">
+        <meta charset='utf-8'>
+        <title>Python notes</title>
+    </head>
+    
+    <body>
+    <script src="/assets/rainbow-custom.min.js"></script>
+    <p align='justify'>
+
+    <a href='index.html'>Назад</a> <br>
+
+    <h2>Именованные кортежи</h2>
+    
+    <pre><code data-language="python">
+        from collections import namedtuple
+
+
+        """
+        ПОСТАНОВКА ЗАДАЧИ
+        Пример:
+        color = (55, 155, 255)
+        print(color[0])    # 55
+        Имеется такой код. Он не очень читабелен, поскольку спустя время забывается,
+        что такое [0] или [1] и подобные индексы. Чтобы повысить читабельность кода в
+        таких случаях - пользуются именованными кортежами.
+        """
+
+        Color = namedtuple('Color', ['red', 'green', 'blue'])
+
+        color = Color(55, 155, 255)
+        print(color.blue)    # 255
+        
+    </body>
+</html>
+
+
+
+
+        
