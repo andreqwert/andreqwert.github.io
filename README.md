@@ -1,4 +1,4 @@
 # andreqwert.github.io
 
-Попытка сделать персональный сайт за пару вечеров, поиграться в HTML и CSS.
+A little try to make personal website from scratch with HTML only. 
 
